@@ -12,7 +12,6 @@ def island(x1, y1, x2, y2, n, ratio=0.25):
         p2x = x1 + (1 - ratio) * dx + ratio * dy
         p2y = y1 + (1 - ratio) * dy - ratio * dx
         
-        island(x1, y1, x2, y2, n-1, ratio)
         island(x1, y1, p1x, p1y, n-1, ratio)
         island(p1x, p1y, p2x, p2y, n-1, ratio)
         island(p2x, p2y, x2, y2, n-1, ratio)
